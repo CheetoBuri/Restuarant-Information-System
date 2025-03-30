@@ -1,0 +1,7 @@
+@startuml
+[*] --> OrderReady
+OrderReady --> OrderPickedUp : Waiter picks up order
+OrderPickedUp --> OrderServed : Waiter serves order to customer
+OrderServed --> [*]
+@enduml
+

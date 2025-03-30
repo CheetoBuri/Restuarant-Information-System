@@ -1,0 +1,6 @@
+@startuml
+[*] --> OrdersDisplayed
+OrdersDisplayed --> OrderSelected : Chef selects order to view details
+OrderSelected --> [*]
+@enduml
+

@@ -1,0 +1,17 @@
+@startuml
+actor Customer
+participant "Restaurant System" as System
+participant "Payment Processor" as Payment
+
+Customer -> System: Request Bill
+System -> System: Generate Bill
+System -> Customer: Display Bill
+Customer -> System: Select Payment Method
+System -> Payment: Process Payment
+Payment -> System: Payment Confirmation
+System -> Customer: Display Payment Success
+System -> System: Generate Receipt
+System -> Customer: Provide Receipt
+
+@enduml
+

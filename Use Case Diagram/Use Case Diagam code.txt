@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+actor Customer
+actor Waiter
+actor Chef
+actor Manager
+
+rectangle "Restaurant Information System" {
+    usecase "View Menu" as UC1
+    usecase "Place Order" as UC2
+    usecase "Make Payment" as UC3
+    usecase "Take Order" as UC4
+    usecase "Serve Order" as UC5
+    usecase "Generate Bill" as UC6
+    usecase "View Orders" as UC7
+    usecase "Prepare Order" as UC8
+    usecase "Update Order Status" as UC9
+    usecase "Manage Menu" as UC10
+    usecase "Generate Sales Report" as UC11
+    usecase "Manage Staff" as UC12
+}
+
+Customer --> UC1
+Customer --> UC2
+Customer --> UC3
+
+Waiter --> UC4
+Waiter --> UC5
+Waiter --> UC6
+
+Chef --> UC7
+Chef --> UC8
+Chef --> UC9
+
+Manager --> UC10
+Manager --> UC11
+Manager --> UC12
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+[*] --> ReportRequested
+ReportRequested --> ReportGenerated : System compiles sales data
+ReportGenerated --> ReportViewed : Manager reviews report
+ReportViewed --> [*]
+@enduml
+

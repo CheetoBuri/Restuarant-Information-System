@@ -1,0 +1,10 @@
+@startuml
+actor Manager
+participant "Restaurant System" as System
+
+Manager -> System: Add/Update/Remove Menu Item
+System -> System: Validate Changes
+System -> System: Update Menu Database
+System -> Manager: Confirm Changes
+
+@enduml

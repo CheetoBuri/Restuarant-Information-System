@@ -1,0 +1,14 @@
+@startuml
+|Waiter|
+start
+:Request Bill for Customer;
+|System|
+:Retrieve Order Details;
+:Calculate Total Amount;
+:Generate Bill;
+|Waiter|
+:Print and Present Bill to Customer;
+|Customer|
+:Review Bill;
+stop
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+[*] --> OrderReceived
+OrderReceived --> InProgress : Chef starts preparation
+InProgress --> Ready : Chef updates status
+Ready --> Served : Waiter picks up order
+Served --> [*]
+@enduml

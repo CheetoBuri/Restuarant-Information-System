@@ -1,0 +1,11 @@
+@startuml
+|Chef|
+start
+:Access Kitchen Order System;
+|System|
+:Retrieve Pending Orders;
+:Display Orders to Chef;
+|Chef|
+:Review Orders;
+stop
+@enduml

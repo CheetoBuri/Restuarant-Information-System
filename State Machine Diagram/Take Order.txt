@@ -1,0 +1,6 @@
+@startuml
+[*] --> OrderReceived
+OrderReceived --> OrderEntered : Waiter enters order into system
+OrderEntered --> OrderSentToKitchen : System processes order
+OrderSentToKitchen --> [*]
+@enduml

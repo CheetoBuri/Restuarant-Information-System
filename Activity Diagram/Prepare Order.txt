@@ -1,0 +1,17 @@
+@startuml
+|Chef|
+start
+:Receive Order from System;
+:Check Ingredients Availability;
+if (Ingredients Available?) then (Yes)
+    :Start Preparing Dish;
+    :Cook and Assemble Order;
+    :Mark Order as Ready;
+    |System|
+    :Update Order Status;
+    :Notify Waiter;
+else (No)
+    :Notify Manager of Missing Ingredients;
+endif
+stop
+@enduml

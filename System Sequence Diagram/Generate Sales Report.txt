@@ -1,0 +1,12 @@
+@startuml
+actor Manager
+participant "Restaurant System" as System
+
+Manager -> System: Request Sales Report
+System -> System: Retrieve Sales Data
+System -> System: Generate Report
+System -> Manager: Display Report
+
+@enduml
+
+

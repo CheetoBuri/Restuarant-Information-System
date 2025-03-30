@@ -1,0 +1,11 @@
+@startuml
+|Manager|
+start
+:Log in to System;
+:Access Staff Management;
+:Select Add, Remove, or Update Staff;
+|System|
+:Validate Changes;
+:Update Staff Database;
+stop
+@enduml

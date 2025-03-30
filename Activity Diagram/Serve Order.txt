@@ -1,0 +1,14 @@
+@startuml
+|Chef|
+start
+:Prepare Order;
+:Update Order Status to "Ready";
+|System|
+:Notify Waiter;
+|Waiter|
+:Pick Up Order;
+:Serve Order to Customer;
+|Customer|
+:Receive Order;
+stop
+@enduml

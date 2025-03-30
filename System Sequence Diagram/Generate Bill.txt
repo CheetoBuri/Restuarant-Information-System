@@ -1,0 +1,12 @@
+@startuml
+actor Waiter
+participant "Restaurant System" as System
+
+Waiter -> System: Request Bill
+System -> System: Retrieve Order Details
+System -> System: Calculate Total Amount
+System -> Waiter: Generate and Display Bill
+
+@enduml
+
+

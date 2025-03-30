@@ -1,0 +1,12 @@
+@startuml
+|Manager|
+start
+:Log in to System;
+:Access Menu Management;
+:Select Add, Remove, or Update Item;
+|System|
+:Validate Changes;
+:Update Menu Database;
+:Notify Staff of Menu Updates;
+stop
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+actor Customer
+participant "Restaurant System" as System
+
+Customer -> System: Select Items
+Customer -> System: Confirm Order
+System -> System: Validate Order
+System -> System: Generate Order Details
+System -> Customer: Display Order Confirmation
+
+@enduml
+

@@ -1,0 +1,7 @@
+@startuml
+[*] --> BillRequested
+BillRequested --> BillGenerated : System generates bill
+BillGenerated --> BillPresented : Waiter presents bill to customer
+BillPresented --> [*]
+@enduml
+

@@ -1,0 +1,9 @@
+@startuml
+[*] --> BillGenerated
+BillGenerated --> PaymentProcessing : Customer chooses payment method
+PaymentProcessing --> PaymentSuccessful : Payment is completed
+PaymentProcessing --> PaymentFailed : Payment is declined
+PaymentFailed --> PaymentProcessing : Retry payment
+PaymentSuccessful --> ReceiptGenerated
+ReceiptGenerated --> [*]
+@enduml

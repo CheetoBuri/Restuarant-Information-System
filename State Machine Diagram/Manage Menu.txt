@@ -1,0 +1,10 @@
+@startuml
+[*] --> MenuDisplayed
+MenuDisplayed --> MenuItemAdded : Manager adds new item
+MenuDisplayed --> MenuItemUpdated : Manager updates item details
+MenuDisplayed --> MenuItemRemoved : Manager removes item
+MenuItemAdded --> [*]
+MenuItemUpdated --> [*]
+MenuItemRemoved --> [*]
+@enduml
+

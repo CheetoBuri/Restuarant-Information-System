@@ -1,0 +1,10 @@
+@startuml
+actor Waiter
+participant "Restaurant System" as System
+
+Waiter -> System: Enter Order Details
+System -> System: Validate Order
+System -> System: Save Order in Database
+System -> Waiter: Display Order Confirmation
+
+@enduml

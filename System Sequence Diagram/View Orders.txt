@@ -1,0 +1,9 @@
+@startuml
+actor Chef
+participant "Restaurant System" as System
+
+Chef -> System: Request Pending Orders
+System -> System: Retrieve Orders from Database
+System -> Chef: Display Orders
+
+@enduml

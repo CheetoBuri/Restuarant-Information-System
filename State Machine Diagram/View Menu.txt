@@ -1,0 +1,5 @@
+@startuml
+[*] --> MenuDisplayed
+MenuDisplayed --> MenuSelected : Customer selects category/item
+MenuDisplayed --> [*] : Customer exits
+@enduml

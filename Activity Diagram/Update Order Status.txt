@@ -1,0 +1,14 @@
+@startuml
+|Chef|
+start
+:Access Kitchen Order System;
+:Select Order to Update;
+|System|
+:Display Order Details;
+|Chef|
+:Change Order Status (e.g., In Progress, Ready);
+|System|
+:Update Order Status in Database;
+:Notify Waiter;
+stop
+@enduml

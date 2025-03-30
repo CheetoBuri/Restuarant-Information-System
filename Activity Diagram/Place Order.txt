@@ -1,0 +1,16 @@
+@startuml
+|Customer|
+start
+:View Menu;
+:Select Items;
+:Confirm Order;
+|System|
+:Generate Order Request;
+|Waiter|
+:Receive Order (if Dine-in);
+|System|
+:Send Order to Kitchen;
+|Chef|
+:Receive Order Notification;
+stop
+@enduml

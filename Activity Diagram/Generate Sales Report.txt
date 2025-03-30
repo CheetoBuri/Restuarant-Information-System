@@ -1,0 +1,13 @@
+@startuml
+|Manager|
+start
+:Log in to System;
+:Access Sales Report Section;
+:Select Report Type (Daily, Weekly, Monthly);
+|System|
+:Retrieve Sales Data;
+:Generate Sales Report;
+|Manager|
+:Review Report;
+stop
+@enduml

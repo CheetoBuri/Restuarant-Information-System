@@ -1,0 +1,9 @@
+@startuml
+[*] --> OrderCreated
+OrderCreated --> OrderConfirmed : Customer confirms order
+OrderCreated --> OrderCancelled : Customer cancels order
+OrderConfirmed --> OrderSentToKitchen : System sends order to kitchen
+OrderCancelled --> [*]
+OrderSentToKitchen --> [*]
+@enduml
+

@@ -1,0 +1,8 @@
+@startuml
+actor Customer
+participant "Restaurant System" as System
+
+Customer -> System: Request Menu
+System -> System: Retrieve Menu Data
+System -> Customer: Display Menu
+@enduml

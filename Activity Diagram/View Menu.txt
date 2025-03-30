@@ -1,0 +1,11 @@
+@startuml
+|Customer|
+start
+:Open Restaurant System;
+:Request to View Menu;
+|System|
+:Retrieve Menu Data;
+:Display Menu to Customer;
+|Customer|
+stop
+@enduml

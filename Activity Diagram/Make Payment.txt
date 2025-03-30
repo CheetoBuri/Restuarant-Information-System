@@ -1,0 +1,24 @@
+@startuml
+|Customer|
+start
+:Request Bill;
+|Waiter|
+:Generate Bill;
+:Present Bill to Customer;
+|Customer|
+:Select Payment Method;
+|System|
+:Process Payment;
+if (Payment Successful?) then (Yes)
+    |System|
+    :Generate Receipt;
+    |Customer|
+    :Receive Receipt;
+else (No)
+    |System|
+    :Display Payment Error;
+    |Customer|
+    :Retry Payment;
+endif
+stop
+@enduml

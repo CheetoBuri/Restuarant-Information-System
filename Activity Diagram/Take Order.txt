@@ -1,0 +1,12 @@
+@startuml
+|Waiter|
+start
+:Receive Order from Customer;
+:Enter Order into System;
+|System|
+:Validate Order;
+:Send Order to Kitchen;
+|Chef|
+:Receive Order Notification;
+stop
+@enduml

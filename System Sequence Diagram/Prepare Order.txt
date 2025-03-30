@@ -1,0 +1,11 @@
+@startuml
+actor Chef
+participant "Restaurant System" as System
+
+System -> Chef: Notify New Order
+Chef -> System: Update Order Status to "In Progress"
+System -> System: Save Status Update
+Chef -> System: Mark Order as Ready
+System -> System: Notify Waiter
+
+@enduml

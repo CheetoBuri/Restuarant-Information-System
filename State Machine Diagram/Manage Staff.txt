@@ -1,0 +1,11 @@
+@startuml
+[*] --> StaffManagement
+StaffManagement --> StaffAdded : Manager adds new staff member
+StaffManagement --> StaffUpdated : Manager updates staff information
+StaffManagement --> StaffRemoved : Manager removes staff member
+StaffAdded --> [*]
+StaffUpdated --> [*]
+StaffRemoved --> [*]
+@enduml
+
+
