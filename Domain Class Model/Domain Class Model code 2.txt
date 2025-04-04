@@ -1,0 +1,80 @@
+@startuml
+class Customer {
+  - customerID: int
+  - name: String
+  - contact: String
+  + viewMenu(): void
+  + placeOrder(): void
+  + makePayment(): void
+}
+
+class Waiter {
+  - waiterID: int
+  - name: String
+  + takeOrder(): void
+  + serveOrder(): void
+  + generateBill(): void
+}
+
+class Chef {
+  - chefID: int
+  - name: String
+  + viewOrders(): void
+  + prepareOrder(): void
+  + updateOrderStatus(): void
+}
+
+class Manager {
+  - managerID: int
+  - name: String
+  + manageMenu(): void
+  + generateSalesReport(): void
+  + manageStaff(): void
+}
+
+class Menu {
+  - menuID: int
+  - items: List<MenuItem>
+  + viewMenu(): List<MenuItem>
+}
+
+class MenuItem {
+  - itemID: int
+  - name: String
+  - price: double
+  - description: String
+}
+
+class Order {
+  - orderID: int
+  - orderDate: Date
+  - status: String
+  + updateStatus(): void
+}
+
+class Payment {
+  - paymentID: int
+  - amount: double
+  - paymentMethod: String
+  + processPayment(): Boolean
+}
+
+class Receipt {
+  - receiptID: int
+  - orderID: int
+  - totalAmount: double
+  - date: Date
+  + generateReceipt(): void
+}
+
+' Relationships
+Customer --> Order : places
+Waiter --> Order : supervises
+Chef --> Order : prepares
+Manager --> Menu : manages
+Manager --> Waiter : supervises
+Manager --> Chef : supervises
+Order --> MenuItem : includes
+Order --> Payment : has
+Order --> Receipt : generates
+@enduml
