@@ -1,0 +1,57 @@
+@startuml
+!define primary_key(x) <b>x</b>
+!define foreign_key(x) <i>x</i>
+
+entity "Customers" as Customers {
+  primary_key(id): INT
+  name: VARCHAR
+  contact: VARCHAR
+  email: VARCHAR
+  password_hash: VARCHAR
+  created_at: DATETIME
+}
+
+entity "Orders" as Orders {
+  primary_key(id): INT
+  foreign_key(customer_id): INT
+  status: VARCHAR
+  total_price: DECIMAL
+  timestamp: DATETIME
+}
+
+entity "Order_Items" as Order_Items {
+  primary_key(id): INT
+  foreign_key(order_id): INT
+  foreign_key(menu_item_id): INT
+  quantity: INT
+  special_request: TEXT
+}
+
+entity "Menu_Items" as Menu_Items {
+  primary_key(id): INT
+  name: VARCHAR
+  price: DECIMAL
+  category: VARCHAR
+  availability: BOOLEAN
+}
+
+entity "Staff" as Staff {
+  primary_key(id): INT
+  name: VARCHAR
+  role: VARCHAR
+  contact: VARCHAR
+  assigned_section: VARCHAR
+}
+
+entity "Sales_Reports" as Sales_Reports {
+  primary_key(id): INT
+  date: DATE
+  total_revenue: DECIMAL
+  top_selling_items: TEXT
+}
+
+' Relationships
+Customers ||--o{ Orders : places
+Orders ||--o{ Order_Items : contains
+Menu_Items ||--o{ Order_Items : referenced in
+@enduml
