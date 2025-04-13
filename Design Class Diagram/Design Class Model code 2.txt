@@ -3,26 +3,39 @@ class Customer {
   - customerID: int
   - name: String
   - contact: String
+  + viewMenu(): void
+  + placeOrder(): void
+  + makePayment(): void
 }
 
 class Waiter {
   - waiterID: int
   - name: String
+  + takeOrder(): void
+  + serveOrder(): void
+  + generateBill(): void
 }
 
 class Chef {
   - chefID: int
   - name: String
+  + viewOrders(): void
+  + prepareOrder(): void
+  + updateOrderStatus(): void
 }
 
 class Manager {
   - managerID: int
   - name: String
+  + manageMenu(): void
+  + generateSalesReport(): void
+  + manageStaff(): void
 }
 
 class Menu {
   - menuID: int
   - items: List<MenuItem>
+  + viewMenu(): List<MenuItem>
 }
 
 class MenuItem {
@@ -36,12 +49,14 @@ class Order {
   - orderID: int
   - orderDate: Date
   - status: String
+  + updateStatus(): void
 }
 
 class Payment {
   - paymentID: int
   - amount: double
   - paymentMethod: String
+  + processPayment(): Boolean
 }
 
 class Receipt {
@@ -49,6 +64,7 @@ class Receipt {
   - orderID: int
   - totalAmount: double
   - date: Date
+  + generateReceipt(): void
 }
 
 ' Relationships
